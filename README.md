@@ -34,7 +34,7 @@ Before getting started, make sure you have the following installed:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/Shubham06-op/Nestjs-Book-CRUD.git
+   git clone https://github.com/Shubham06-op/NESTJS-JWT-BOOK-CRUD.git
    cd nestjs-book-crud
 
 2. Install dependencies:
