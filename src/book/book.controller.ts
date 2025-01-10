@@ -1,10 +1,10 @@
 import { Controller, Get, Post, Body, Param, Put, Delete, UseGuards, ValidationPipe, UsePipes } from '@nestjs/common';
 import { BookService } from './book.service';
 import { CreateBookDto } from './dto/create-book.dto';
-import { JwtAuthGuard } from '../auth/jwt-auth.guard';  // Make sure this import is correct
+import { JwtAuthGuard } from '../auth/jwt-auth.guard';  
 
 @Controller('book')
-@UseGuards(JwtAuthGuard) // Protect all routes
+@UseGuards(JwtAuthGuard) 
 export class BookController {
   constructor(private readonly bookService: BookService) {}
 
