@@ -43,11 +43,9 @@ describe('BookService', () => {
       genre: 'Fiction',
       yearPublished: 2020,
     };
-
-    // Mock the create method to return the mockCreatedBook
+   
     (repository.create as jest.Mock).mockReturnValue(mockCreatedBook);
 
-    // Mock the save method to resolve with the mockCreatedBook
     (repository.save as jest.Mock).mockResolvedValue(mockCreatedBook);
 
     const result = await service.create({
@@ -57,11 +55,9 @@ describe('BookService', () => {
       yearPublished: 2020,
     });
 
-    // Assert the result
     expect(result).toHaveProperty('id');
     expect(result.title).toBe('Test Book');
 
-    // Ensure create and save methods were called correctly
     expect(repository.create).toHaveBeenCalledWith({
       title: 'Test Book',
       author: 'Author',
