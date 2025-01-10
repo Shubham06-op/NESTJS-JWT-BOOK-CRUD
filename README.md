@@ -55,3 +55,4 @@ Before getting started, make sure you have the following installed:
 - **During development**: It’s not necessary unless you have a staging or local deployment URL.
 
 In summary, the API URL should be included **only if the project is deployed** or if you want to provide users with a specific URL for accessing your live API.
+
