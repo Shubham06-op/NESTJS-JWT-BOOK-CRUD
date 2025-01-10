@@ -1,4 +1,4 @@
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 
 @Entity()
 export class Book {
@@ -14,6 +14,6 @@ export class Book {
   @Column()
   genre: string;
 
-  @Column({ name: 'yearPublished' })
+  @Column()
   yearPublished: number;
 }

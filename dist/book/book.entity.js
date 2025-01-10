@@ -31,7 +31,7 @@ __decorate([
     __metadata("design:type", String)
 ], Book.prototype, "genre", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ name: 'yearPublished' }),
+    (0, typeorm_1.Column)(),
     __metadata("design:type", Number)
 ], Book.prototype, "yearPublished", void 0);
 exports.Book = Book = __decorate([
