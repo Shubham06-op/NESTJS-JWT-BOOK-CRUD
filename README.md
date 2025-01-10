@@ -10,7 +10,7 @@ A simple CRUD application built with **NestJS** for managing books. It uses **Po
 - **Delete** books.
 - Integrated with **PostgreSQL** for database operations.
 - Authentication and authorization using **JWT** (JSON Web Tokens).
-
+  
 ## Technologies Used
 
 - **NestJS**: Framework for building scalable server-side applications.
@@ -19,88 +19,39 @@ A simple CRUD application built with **NestJS** for managing books. It uses **Po
 - **Node.js**: Backend runtime environment.
 - **JWT**: For user authentication and authorization.
 
-## Postman Usage
+## API URL (if deployed)
+- **Base URL**: `https://your-deployed-url.com/api` (Replace with the actual URL if deployed)
 
-You can use **Postman** to test the API endpoints locally. Here's how:
+## Prerequisites
 
-### 1. **Create a JWT Token**
-To interact with protected routes (CRUD operations), you first need to authenticate and receive a JWT token.
-
-- Send a `POST` request to `http://localhost:3000/auth/login` with the following body:
-
-```json
-{
-  "username": "testuser",
-  "password": "yourpassword"
-}
-The response will contain a JWT token. Use this token to authorize subsequent requests.
-
-2. Using the JWT Token
-Once you have the JWT token, you can use it in the Authorization header of your requests.
-
-In Postman, go to the Authorization tab.
-Choose Bearer Token from the dropdown.
-Paste the JWT token you received from the login endpoint.
-3. Testing the CRUD Endpoints
-Create Book (POST /book)
-
-URL: http://localhost:3000/book
-Body (JSON):
-json
-Copy code
-{
-  "title": "Test Book",
-  "author": "Author Name",
-  "genre": "Fiction",
-  "yearPublished": 2021
-}
-Get All Books (GET /book)
-
-URL: http://localhost:3000/book
-Get Book by ID (GET /book/:id)
-
-URL: http://localhost:3000/book/{bookId}
-Update Book (PUT /book/:id)
-
-URL: http://localhost:3000/book/{bookId}
-Body (JSON):
-json
-Copy code
-{
-  "title": "Updated Book Title",
-  "author": "Updated Author",
-  "genre": "Updated Genre",
-  "yearPublished": 2022
-}
-Delete Book (DELETE /book/:id)
-
-URL: http://localhost:3000/book/{bookId}
-Prerequisites
 Before getting started, make sure you have the following installed:
 
-Node.js (v14+ recommended)
-PostgreSQL installed locally or on a server.
-Postman installed for testing the API.
-Basic understanding of NestJS and PostgreSQL.
-Installation
-Clone the repository:
+- **Node.js** (v14+ recommended)
+- **PostgreSQL** installed locally or on a server.
+- Basic understanding of **NestJS** and **PostgreSQL**.
+  
+## Installation
 
-bash
-Copy code
-git clone https://github.com/Shubham06-op/Nestjs-Book-CRUD.git
-cd nestjs-book-crud
-Install dependencies:
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/Shubham06-op/Nestjs-Book-CRUD.git
+   cd nestjs-book-crud
 
-bash
-Copy code
-npm install
-Set up the PostgreSQL database: Make sure you have PostgreSQL running and configure the database connection in the ormconfig.json or .env file with your database details.
-
-Run the application:
-
-bash
-Copy code
-npm run start
-The application should now be running at http://localhost:3000. You can access the API endpoints using Postman.
+2. Install dependencies:
 
 
+   npm install
+
+3. Set up the PostgreSQL database: Make sure you have PostgreSQL running and configure the database connection in the ormconfig.json or .env file with your database details.
+
+4. Run the application:
+   npm run start
+
+5. The application should now be running at http://localhost:3000 (or whichever port you've configured). You can access the API endpoints at this URL.
+
+
+### When to include the API URL:
+- **When deployed**: If you've deployed the API to a server (e.g., Heroku, AWS, or any other hosting service), include the live API URL in the `README.md`.
+- **During development**: It’s not necessary unless you have a staging or local deployment URL.
+
+In summary, the API URL should be included **only if the project is deployed** or if you want to provide users with a specific URL for accessing your live API.
