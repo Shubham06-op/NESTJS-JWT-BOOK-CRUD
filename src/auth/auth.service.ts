@@ -8,14 +8,14 @@ export class AuthService implements OnModuleInit {
     {
       id: 1,
       username: 'testuser',
-      password: '', // Placeholder for pre-hashed password
+      password: '', 
     },
   ];
 
   constructor(private readonly jwtService: JwtService) {}
 
   async onModuleInit() {
-    // Hash the password for the test user during module initialization
+   
     this.users[0].password = await bcrypt.hash('password', 10);
   }
 
