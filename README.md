@@ -50,9 +50,3 @@ Before getting started, make sure you have the following installed:
 5. The application should now be running at http://localhost:3000 (or whichever port you've configured). You can access the API endpoints at this URL.
 
 
-### When to include the API URL:
-- **When deployed**: If you've deployed the API to a server (e.g., Heroku, AWS, or any other hosting service), include the live API URL in the `README.md`.
-- **During development**: It’s not necessary unless you have a staging or local deployment URL.
-
-In summary, the API URL should be included **only if the project is deployed** or if you want to provide users with a specific URL for accessing your live API.
-

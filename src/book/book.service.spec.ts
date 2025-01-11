@@ -43,7 +43,6 @@ describe('BookService', () => {
       genre: 'Fiction',
       yearPublished: 2020,
     };
-
     (repository.create as jest.Mock).mockReturnValue(mockCreatedBook);
 
     (repository.save as jest.Mock).mockResolvedValue(mockCreatedBook);
