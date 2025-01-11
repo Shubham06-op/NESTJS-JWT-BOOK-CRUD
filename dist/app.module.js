@@ -11,6 +11,7 @@ const common_1 = require("@nestjs/common");
 const typeorm_1 = require("@nestjs/typeorm");
 const book_module_1 = require("./book/book.module");
 const auth_module_1 = require("./auth/auth.module");
+const user_entity_1 = require("./auth/entities/user.entity");
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
@@ -24,8 +25,8 @@ exports.AppModule = AppModule = __decorate([
                 username: 'postgres',
                 password: 'T!mepass06',
                 database: 'nestjs_crud',
-                entities: [__dirname + '/**/*.entity{.ts,.js}'],
-                synchronize: false,
+                entities: [user_entity_1.User, __dirname + '/**/*.entity{.ts,.js}'],
+                synchronize: true,
             }),
             book_module_1.BookModule,
             auth_module_1.AuthModule,
