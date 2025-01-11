@@ -19,8 +19,6 @@ A simple CRUD application built with **NestJS** for managing books. It uses **Po
 - **Node.js**: Backend runtime environment.
 - **JWT**: For user authentication and authorization.
 
-## API URL (if deployed)
-- **Base URL**: `https://your-deployed-url.com/api` (Replace with the actual URL if deployed)
 
 ## Prerequisites
 
